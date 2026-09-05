@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Giovanny Sales</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0B0F17;color:#F6F6F6;font-family:Arial,Helvetica,sans-serif}
+.wrap{max-width:760px;margin:auto;padding:18px}
+.hero img{display:block;width:100%;height:auto;border-radius:28px;border:1px solid #303747}
+.card{background:#121722;border:1px solid #303747;border-radius:28px;padding:28px;margin:24px 0;text-align:center}
+.eyebrow{letter-spacing:.28em;color:#9aa3b2;font-size:14px}
+.gold{color:#D4AF37}
+h1{font-size:38px;line-height:1.08;margin:16px 0}
+h2{font-size:28px}
+p{font-size:20px;line-height:1.5;color:#d6d8de}
+.btn{display:block;width:100%;border:0;border-radius:18px;background:#D4AF37;color:#0B0F17;font-weight:800;font-size:19px;padding:18px;text-decoration:none}
+.form{display:none}
+.step{display:none;text-align:left}
+.step.active{display:block}
+.progress{height:8px;background:#252c37;border-radius:99px;overflow:hidden;margin-bottom:24px}
+.progress span{display:block;height:100%;background:#D4AF37}
+label{display:block;font-weight:700;margin:18px 0 8px}
+input,select,textarea{width:100%;padding:15px;border-radius:14px;border:1px solid #3a4352;background:#0B0F17;color:#F6F6F6;font-size:16px}
+textarea{min-height:110px}
+.nav{display:flex;gap:10px;margin-top:22px}
+.nav .btn{flex:1}
+.secondary{background:#252c37;color:white}
+.socials{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.socials a{padding:14px;border:1px solid #303747;border-radius:14px;color:white;text-decoration:none}
+.success{display:none}
+@media(max-width:520px){h1{font-size:32px}.socials{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<section class="hero">
+<img src="https://quqxxuganlltqftkexye.supabase.co/storage/v1/object/public/giovanny-sales-media/hero">
+</section>
+
+<section class="card" id="intro">
+<div class="eyebrow">ME PRESENTO</div>
+<h1>Soy Giovanny. <span class="gold">Vamos en conjunto a mejorar tu negocio.</span></h1>
+<p>Antes de reunirnos quiero entender dónde estás, qué te está frenando y qué resultado quieres conseguir.</p>
+<button class="btn" id="start">¿QUIERES SER UN CASO DE ÉXITO? →</button>
+</section>
+
+<section class="card form" id="formWrap">
+<div class="eyebrow">DIAGNÓSTICO INICIAL</div>
+<h2>Cuéntame sobre tu negocio</h2>
+<p>Quiero conocer tu situación antes de proponerte una solución.</p>
+<div class="progress"><span id="bar"></span></div>
+
+<form id="leadForm">
+<input type="hidden" name="_subject" value="Nuevo diagnóstico — Giovanny Sales">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="Origen" value="Sitio web Giovanny Sales">
+
+<div class="step active">
+<label>Nombre *</label><input name="Nombre" required>
+<label>WhatsApp *</label><input name="WhatsApp" required>
+<label>Email</label><input name="Email" type="email">
+</div>
+
+<div class="step">
+<label>Nombre del negocio *</label><input name="Negocio" required>
+<label>Ciudad / país *</label><input name="Ciudad / País" required>
+<label>¿Qué vendes u ofreces? *</label><textarea name="Qué vende" required></textarea>
+</div>
+
+<div class="step">
+<label>¿Cómo consigues clientes?</label>
+<select name="Cómo consigue clientes">
+<option>Redes sociales</option>
+<option>Recomendaciones</option>
+<option>Publicidad pagada</option>
+<option>Local físico</option>
+<option>Sitio web</option>
+<option>Marketplace</option>
+<option>Varias</option>
+<option>Otro</option>
+</select>
+<label>Redes sociales o sitio web</label>
+<input name="Redes / sitio web">
+</div>
+
+<div class="step">
+<label>Ventas mensuales aproximadas</label>
+<select name="Ventas mensuales">
+<option>No sé / prefiero hablarlo</option>
+<option>Aún no vendo</option>
+<option>Menos de $20,000 MXN</option>
+<option>$20,000–$50,000 MXN</option>
+<option>$50,000–$100,000 MXN</option>
+<option>$100,000–$250,000 MXN</option>
+<option>$250,000–$500,000 MXN</option>
+<option>Más de $500,000 MXN</option>
+</select>
+<label>Ticket promedio</label><input name="Ticket promedio">
+<label>Clientes nuevos al mes</label><input name="Clientes nuevos">
+</div>
+
+<div class="step">
+<label>¿Pagas publicidad actualmente?</label>
+<select name="Publicidad">
+<option>No</option>
+<option>Meta Ads</option>
+<option>Google Ads</option>
+<option>TikTok Ads</option>
+<option>Varias plataformas</option>
+</select>
+<label>Inversión mensual en publicidad</label>
+<input name="Inversión publicidad">
+</div>
+
+<div class="step">
+<label>Cuando un prospecto pregunta, ¿qué sucede después?</label>
+<textarea name="Seguimiento"></textarea>
+<label>¿Utilizas CRM o algún sistema de seguimiento?</label>
+<input name="CRM">
+</div>
+
+<div class="step">
+<label>¿Cuál es tu principal problema? *</label>
+<textarea name="Problema principal" required></textarea>
+<label>¿Qué crees que está frenando tus ventas?</label>
+<textarea name="Freno ventas"></textarea>
+</div>
+
+<div class="step">
+<label>¿Qué quieres conseguir en los próximos 3 meses? *</label>
+<textarea name="Meta 3 meses" required></textarea>
+<label>¿Cuánto podrías invertir mensualmente para crecer?</label>
+<select name="Presupuesto crecimiento">
+<option>Primero quiero conocer la propuesta</option>
+<option>Menos de $3,000 MXN</option>
+<option>$3,000–$7,000 MXN</option>
+<option>$7,000–$15,000 MXN</option>
+<option>$15,000–$30,000 MXN</option>
+<option>Más de $30,000 MXN</option>
+</select>
+</div>
+
+<div class="step">
+<label>Horario preferido para reunirnos *</label>
+<input name="Horario preferido" placeholder="Ej. martes 5:00 pm" required>
+<label>¿Algo más que debamos saber?</label>
+<textarea name="Contexto adicional"></textarea>
+<p>Analizaremos personalmente tu negocio antes de nuestra llamada para llegar con ideas y oportunidades específicas para ti.</p>
+</div>
+
+<div class="nav">
+<button type="button" class="btn secondary" id="back">Atrás</button>
+<button type="button" class="btn" id="next">Siguiente</button>
+</div>
+</form>
+
+<div class="success" id="success">
+<h2 class="gold">¡Listo!</h2>
+<p>Recibimos tu diagnóstico. Analizaremos personalmente tu negocio antes de nuestra llamada para llegar con ideas y oportunidades específicas para ti.</p>
+<a class="btn" href="https://wa.me/523312604405">HABLEMOS POR WHATSAPP</a>
+</div>
+</section>
+
+<section class="card">
+<div class="eyebrow">CONECTEMOS</div>
+<h2>Sigue a <span class="gold">Giovanny Sales</span></h2>
+<div class="socials">
+<a href="https://www.facebook.com/share/14i52RhV4RM/?mibextid=wwXIfr">Facebook</a>
+<a href="https://www.instagram.com/giov.annysales?igsi=OXFmY3Rzdmx5OGpx&utm_source=qr">Instagram</a>
+<a href="https://www.tiktok.com/@giovannysales7?_r=1&_t=ZT-99SgXZNaLV7">TikTok</a>
+<a href="https://www.linkedin.com/in/giovanni-magaña-445045434">LinkedIn</a>
+</div>
+</section>
+
+</main>
+
+<script>
+const steps=[...document.querySelectorAll('.step')];
+const bar=document.getElementById('bar');
+const back=document.getElementById('back');
+const next=document.getElementById('next');
+const form=document.getElementById('leadForm');
+let i=0;
+
+document.getElementById('start').onclick=()=>{
+ document.getElementById('intro').style.display='none';
+ document.getElementById('formWrap').style.display='block';
+ draw();
+};
+
+function draw(){
+ steps.forEach((s,n)=>s.classList.toggle('active',n===i));
+ bar.style.width=((i+1)/steps.length*100)+'%';
+ back.style.visibility=i===0?'hidden':'visible';
+ next.textContent=i===steps.length-1?'Enviar diagnóstico':'Siguiente';
+}
+
+function valid(){
+ for(const f of steps[i].querySelectorAll('input,select,textarea')){
+  if(!f.checkValidity()){f.reportValidity();return false;}
+ }
+ return true;
+}
+
+back.onclick=()=>{if(i>0){i--;draw();}};
+
+next.onclick=async()=>{
+ if(!valid())return;
+ if(i<steps.length-1){i++;draw();return;}
+
+ next.disabled=true;
+ next.textContent='Enviando...';
+
+ try{
+  const r=await fetch('https://formsubmit.co/ajax/publimaster7magana@gmail.com',{
+   method:'POST',
+   headers:{Accept:'application/json'},
+   body:new FormData(form)
+  });
+
+  if(!r.ok)throw new Error();
+
+  form.style.display='none';
+  document.getElementById('success').style.display='block';
+
+ }catch(e){
+  alert('No pudimos enviar el formulario. Inténtalo nuevamente.');
+  next.disabled=false;
+  next.textContent='Enviar diagnóstico';
+ }
+};
+
+draw();
+</script>
+</body>
+</html>

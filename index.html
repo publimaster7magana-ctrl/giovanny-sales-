@@ -12,6 +12,8 @@
 @media(max-width:900px){.layout{gap:28px;grid-template-columns:minmax(0,1.4fr) minmax(230px,.8fr)}.services{grid-template-columns:1fr 1fr}.header nav>a{display:none}.about{gap:25px;padding:28px}.intro h1{font-size:36px}}
 @media(max-width:680px){.wrap{padding-left:18px;padding-right:18px}.header{padding-top:15px;padding-bottom:15px;gap:10px}.wordmark{font-size:15px;letter-spacing:.035em}.header nav{gap:0}.layout{display:flex;flex-direction:column;padding-top:28px;gap:28px}.intro,.aside{width:100%}.intro h1{font-size:34px}.intro>p{font-size:16px}.assessment{padding:20px 16px;border-radius:16px}.choices{grid-template-columns:1fr}.choice{min-height:54px;padding:12px}.fields-two{grid-template-columns:1fr;gap:0}.aside{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}.aside-note{padding:0;font-size:14px}.fact{padding:12px 0}.fact strong{font-size:16px}.fact span{font-size:13px}.aside-note>p{display:none}.section{margin-top:48px}.services,.method,.about{grid-template-columns:1fr}.service{padding:22px}.about{padding:25px 22px;gap:15px}.service .number{margin-bottom:12px}.method{gap:8px}h2{font-size:27px}.form-nav .btn{padding:13px 14px}footer{margin-top:34px}.footer{gap:16px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.progress span{transition:none}}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}.intro .hero-help{font-size:16px;margin-bottom:12px}.service .service-promise{color:var(--white);font-weight:700}.service h4{font-size:16px;margin:0 0 8px}.service ul{padding-left:20px;margin:0 0 20px;color:var(--muted);font-size:16px}.service li{margin-bottom:7px}.service p{font-size:16px}.service strong{color:var(--white)}.service button{font-size:16px;min-height:48px}.projects{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}.projects p{margin-bottom:0}.method{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:24px}.call-panel{border:1px solid var(--line);background:var(--panel);border-radius:20px;padding:32px}.call-panel>p{color:var(--muted)}.whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:10;box-shadow:0 4px 24px #0008;font-size:14px}footer{padding-bottom:100px}.about h2{font-size:clamp(27px,3vw,34px)}@media(max-width:680px){.projects,.method{grid-template-columns:1fr}.hero-actions{flex-direction:column}.hero-actions .btn{width:100%}.whatsapp-float{right:12px;bottom:max(12px,env(safe-area-inset-bottom));padding:10px 14px}body:has(input:focus,textarea:focus,select:focus) .whatsapp-float{display:none}.call-panel{padding:24px 20px}}
+.privacy p{overflow-wrap:anywhere}.success-actions{display:flex;flex-wrap:wrap;gap:12px}.service button:hover{color:#f5d96e}.service button:focus-visible{outline-offset:6px}
 </style>
 </head>
 <body>
@@ -20,31 +22,497 @@
 <main class="wrap">
 <div class="layout">
 <section class="intro" aria-labelledby="headline">
-<div class="eyebrow" data-i18n="eyebrow">ESTRATEGIA · CONTENIDO · SEGUIMIENTO</div>
-<h1 id="headline" data-i18n-html="headline">Tu negocio ya tiene potencial.<br><span>Encontremos el siguiente paso.</span></h1>
-<p data-i18n="intro">Cuéntame qué quieres mejorar. Te orientamos hacia el servicio que encaja con tu negocio, antes de preparar una propuesta.</p>
-<section class="assessment" id="diagnostico" aria-label="Diagnóstico de negocio">
+<div class="eyebrow" data-i18n="eyebrow">MARKETING Y VENTAS PARA NEGOCIOS</div>
+<h1 id="headline" data-i18n-html="headline">Atrae prospectos.<br>Retoma conversaciones.<br><span>Genera oportunidades de venta.</span></h1>
+<p data-i18n="intro">Te ayudo a conectar tu contenido, marketing y seguimiento comercial para que tus prospectos tengan un siguiente paso claro. Estrategia e inteligencia artificial aplicadas a lo que tu negocio necesita.</p>
+<p class="hero-help" data-i18n="heroHelp">Empieza con un diagnóstico o platiquemos directamente sobre lo que quieres mejorar.</p><div class="hero-actions"><a class="btn" href="#diagnostico" data-i18n="diagnosisCTA">Iniciar mi diagnóstico</a><a class="btn secondary" href="https://wa.me/523312604405" data-call data-i18n="callCTA">Solicitar una llamada</a></div>
+<section class="assessment" tabindex="-1" id="diagnostico" aria-label="Diagnóstico de negocio">
 <div id="wizard"><div class="step-meta"><span id="stepCount"></span><span data-i18n="noSignup">Sin crear una cuenta</span></div><div class="progress" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="6" aria-valuenow="1"><span id="bar"></span></div>
 <h2 id="stepTitle" tabindex="-1"></h2><p id="stepHelp"></p>
 <form id="leadForm" novalidate><div id="stepContent"></div><p id="formError" class="error" role="alert" hidden></p><div class="form-nav"><button type="button" class="btn secondary" id="back">Atrás</button><button type="submit" class="btn" id="next">Continuar</button></div></form><p class="support-note" data-i18n="privacyHint">Tus respuestas se envían únicamente cuando tú lo solicitas al finalizar.</p></div>
-<div class="success" id="success" hidden role="status"><div class="success-icon" aria-hidden="true">✓</div><h2 data-i18n="successTitle">Solicitud enviada</h2><p data-i18n="successText">Tu información se envió para revisión. Giovanny te contactará para confirmar el alcance y acordar la cita. El horario solicitado todavía no está reservado.</p><a class="btn" href="https://wa.me/523312604405" data-i18n="whatsapp">Hablar por WhatsApp</a></div>
+<div class="success" id="success" hidden role="status" tabindex="-1"><div class="success-icon" aria-hidden="true">✓</div><h2 data-i18n="successTitle">Solicitud enviada</h2><p data-i18n="successText">Tu información se envió para revisión. Giovanny te contactará para confirmar el alcance y acordar la cita. El horario solicitado todavía no está reservado.</p><div class="success-actions"><a class="btn" href="https://wa.me/523312604405" data-i18n="whatsapp">Hablar por WhatsApp</a><button type="button" class="btn secondary" id="restart" data-i18n="restart">Iniciar otro diagnóstico</button></div></div>
 </section>
 <noscript><p>Activa JavaScript para usar el diagnóstico. También puedes contactar a Giovanny por <a href="https://wa.me/523312604405">WhatsApp</a>.</p></noscript>
 </section>
-<aside class="aside"><img class="brand-image" src="https://quqxxuganlltqftkexye.supabase.co/storage/v1/object/public/giovanny-sales-media/hero" alt="Giovanny Sales Agency" width="1024" height="1536"><div class="aside-note"><p data-i18n="sideIntro">Para empresas que quieren dar dirección a su marketing y aprovechar mejor cada oportunidad comercial.</p><div class="facts"><div class="fact"><strong data-i18n="experience">Más de 10 años en ventas</strong><span data-i18n="personal">Atención directa con Giovanny</span></div><div class="fact"><strong data-i18n="coverage">México y Estados Unidos</strong><span data-i18n="languages">Atención en español e inglés</span></div><div class="fact"><strong data-i18n="travel">Producción desde Guadalajara</strong><span data-i18n="travelNote">Viajes disponibles con cotización previa</span></div></div></div></aside>
+<aside class="aside"><img class="brand-image" src="https://quqxxuganlltqftkexye.supabase.co/storage/v1/object/public/giovanny-sales-media/hero" alt="Giovanny Sales Agency" width="1024" height="1536"><div class="aside-note"><p data-i18n="sideIntro">Para empresas que quieren dar dirección a su marketing y aprovechar mejor cada oportunidad comercial.</p><div class="facts"><div class="fact"><strong data-i18n="experience">Estrategia aplicada a tu negocio</strong><span data-i18n="personal">Atención directa con Giovanny</span></div><div class="fact"><strong data-i18n="coverage">México y Estados Unidos</strong><span data-i18n="languages">Atención en español e inglés</span></div><div class="fact"><strong data-i18n="travel">Producción desde Guadalajara</strong><span data-i18n="travelNote">Viajes disponibles con cotización previa</span></div></div></div></aside>
 </div>
-<section class="section" id="servicios"><div class="eyebrow" data-i18n="serviceEyebrow">EL SERVICIO SIGUE AL OBJETIVO</div><h2 data-i18n="serviceTitle">Distintas necesidades. Un plan para la tuya.</h2><p class="section-intro" data-i18n="serviceIntro">Podemos acompañar a tu equipo, ejecutar un servicio definido o enseñarte a hacerlo dentro de tu negocio.</p><div class="services" id="serviceCards"></div></section>
-<section class="section about" id="sobre"><div><div class="eyebrow" data-i18n="aboutEyebrow">CONOCE A GIOVANNY</div><h2 data-i18n="aboutTitle">Experiencia en ventas.<br>Atención personal.</h2></div><div><p data-i18n="aboutBody">Soy Giovanny. Tengo más de diez años de experiencia en ventas y me interesa entender cómo funciona tu negocio antes de proponerte una solución. Combino creatividad, aprendizaje constante y atención personal para convertir tus objetivos en acciones concretas.</p><p data-i18n="aboutBody2">Trabajo directamente contigo: definimos prioridades, acordamos entregables y revisamos los avances. Cada proyecto comienza con una conversación honesta sobre lo que necesitas y lo que podemos hacer.</p><a href="#diagnostico" data-i18n="startLink">Empezar con mi negocio →</a></div></section>
-<section class="section"><div class="eyebrow" data-i18n="processEyebrow">CÓMO TRABAJAMOS</div><h2 data-i18n="processTitle">De la primera pregunta a un plan concreto.</h2><div class="method" id="method"></div></section>
+<section class="section" id="proyectos" aria-labelledby="proof-title"><div class="eyebrow" data-i18n="proofEyebrow">PROYECTOS</div><h2 id="proof-title" data-i18n="proofTitle">Conoce el trabajo detrás de Giovanny Sales</h2><p class="section-intro" data-i18n="proofIntro">Dos ejemplos de cómo llevo la estrategia a herramientas y contenido para negocios.</p><div class="projects"><article class="service"><span class="number" data-i18n="proofOneType">Belleza y cuidado personal</span><h3>Exotic Nails</h3><p data-i18n="proofOne">Desarrollo de un sitio con información de servicios, reservas y un panel para administrar citas. Un proyecto enfocado en facilitar la experiencia de las clientas y la organización del negocio.</p></article><article class="service"><span class="number" data-i18n="proofTwoType">Restaurante</span><h3>Mezcales</h3><p data-i18n="proofTwo">Creación de videos y contenido para presentar platillos, bebidas y promociones en redes sociales. Piezas pensadas para mostrar la experiencia del restaurante y comunicar su oferta con claridad.</p></article></div><a class="btn secondary" href="#diagnostico" data-i18n="proofCTA">Quiero revisar mis oportunidades de venta</a></section>
+<section class="section" id="servicios"><div class="eyebrow" data-i18n="serviceEyebrow">EL SERVICIO SIGUE AL OBJETIVO</div><h2 data-i18n="serviceTitle">¿Qué necesita avanzar en tu negocio?</h2><p class="section-intro" data-i18n="serviceIntro">Encuentra el apoyo que necesitas para atraer prospectos, mejorar tu seguimiento o trabajar con más claridad.</p><div class="services" id="serviceCards"></div><p class="support-note" data-i18n="scopeNote">Las cantidades de piezas, contactos, sesiones, plataformas y herramientas se definen en tu propuesta.</p></section>
+<section class="section about" id="sobre"><div><div class="eyebrow" data-i18n="aboutEyebrow">CONOCE A GIOVANNY</div><h2 data-i18n="aboutTitle">Una estrategia clara. Un trato directo. Un siguiente paso definido.</h2></div><div><p data-i18n="aboutBody">Soy Giovanny, fundador de Giovanny Sales. Trabajo desde Guadalajara con dueños de negocio en México y Estados Unidos que quieren atraer mejores clientes, dar seguimiento y aprovechar las herramientas digitales.</p><p data-i18n="aboutBody2">He trabajado en contenido para restaurantes, campañas para negocios locales y sitios con sistemas de reservas. Mi enfoque es conectar lo que tu negocio comunica con lo que sucede cuando alguien pregunta, cotiza o quiere comprar.</p><p data-i18n="aboutBody3">Trabajas directamente conmigo. Primero reviso cómo llegan tus prospectos, cómo los atiendes y con qué recursos cuentas. Después te propongo qué atender primero, qué vamos a hacer y cómo revisaremos el avance.</p><p data-i18n="aboutBody4">Mi compromiso es que tengas claro para qué sirve cada acción y qué necesito de tu parte para llevarla a la práctica.</p><a class="btn secondary" href="https://wa.me/523312604405" data-call data-i18n="startLink">Platiquemos de tu negocio</a></div></section>
+<section class="section"><div class="eyebrow" data-i18n="processEyebrow">CÓMO TRABAJAMOS</div><h2 data-i18n="processTitle">Primero entendemos el negocio. Después ponemos el plan en marcha.</h2><div class="method" id="method"></div><a class="btn" href="#diagnostico" data-i18n="diagnosisCTA">Iniciar mi diagnóstico</a></section>
+<section class="section call-panel"><h2 data-i18n="callTitle">¿Prefieres contarme directamente qué está pasando en tu negocio?</h2><p data-i18n="callBody">Platiquemos sobre qué quieres mejorar, cómo lo estás resolviendo hoy y si puedo ayudarte.</p><a class="btn" href="https://wa.me/523312604405" data-call data-i18n="callCTA">Solicitar una llamada</a><p class="support-note" data-i18n="callNote">Hablarás directamente conmigo. Acordaremos el horario por WhatsApp.</p></section>
 <section class="section"><div class="eyebrow" data-i18n="faqEyebrow">ANTES DE HABLAR</div><h2 data-i18n="faqTitle">Lo que conviene tener claro.</h2><div id="faqs"></div></section>
 <section class="privacy" id="privacidad" tabindex="-1"><h2 data-i18n="privacyTitle">Uso de tus datos en esta solicitud</h2><p data-i18n="privacyBody">Giovanny Sales utilizará los datos que envíes para revisar tu solicitud, preparar una propuesta y contactarte. El envío se realiza a través de FormSubmit hacia publimaster7magana@gmail.com. Incluye tus respuestas y una orientación automática basada en ellas. No adjuntes bases de clientes, contraseñas ni información confidencial. Para consultar, corregir o solicitar la eliminación de tus datos, escribe a ese mismo correo. Enviar este formulario no te suscribe a campañas publicitarias.</p></section>
 </main>
+<a class="btn whatsapp-float" href="https://wa.me/523312604405" data-whatsapp data-i18n="whatsapp">Hablar por WhatsApp</a>
 <footer><div class="wrap footer"><p>Giovanny Sales · <a href="https://wa.me/523312604405">+52 33 1260 4405</a></p><div class="socials"><a href="https://www.facebook.com/share/14i52RhV4RM/?mibextid=wwXIfr">Facebook</a><a href="https://www.instagram.com/giov.annysales?igsi=OXFmY3Rzdmx5OGpx&utm_source=qr">Instagram</a><a href="https://www.tiktok.com/@giovannysales7?_r=1&_t=ZT-99SgXZNaLV7">TikTok</a><a href="https://www.linkedin.com/in/giovanni-magaña-445045434">LinkedIn</a></div></div></footer>
 <script>
 'use strict';
-const COPY={es:{skip:'Ir al diagnóstico',services:'Servicios',about:'Sobre Giovanny',eyebrow:'ESTRATEGIA · CONTENIDO · SEGUIMIENTO',headline:'Tu negocio ya tiene potencial.<br><span>Encontremos el siguiente paso.</span>',intro:'Cuéntame qué quieres mejorar. Te orientamos hacia el servicio que encaja con tu negocio, antes de preparar una propuesta.',noSignup:'Sin crear una cuenta',privacyHint:'Tus respuestas se envían únicamente cuando tú lo solicitas al finalizar.',successTitle:'Solicitud enviada',successText:'Tu información se envió para revisión. Giovanny te contactará para confirmar el alcance y acordar la cita. El horario solicitado todavía no está reservado.',whatsapp:'Hablar por WhatsApp',sideIntro:'Para empresas que quieren dar dirección a su marketing y aprovechar mejor cada oportunidad comercial.',experience:'Más de 10 años en ventas',personal:'Atención directa con Giovanny',coverage:'México y Estados Unidos',languages:'Atención en español e inglés',travel:'Producción desde Guadalajara',travelNote:'Viajes disponibles con cotización previa',serviceEyebrow:'EL SERVICIO SIGUE AL OBJETIVO',serviceTitle:'Distintas necesidades. Un plan para la tuya.',serviceIntro:'Podemos acompañar a tu equipo, ejecutar un servicio definido o enseñarte a hacerlo dentro de tu negocio.',aboutEyebrow:'CONOCE A GIOVANNY',aboutTitle:'Experiencia en ventas. Atención personal.',aboutBody:'Soy Giovanny. Tengo más de diez años de experiencia en ventas y me interesa entender cómo funciona tu negocio antes de proponerte una solución. Combino creatividad, aprendizaje constante y atención personal para convertir tus objetivos en acciones concretas.',aboutBody2:'Trabajo directamente contigo: definimos prioridades, acordamos entregables y revisamos los avances. Cada proyecto comienza con una conversación honesta sobre lo que necesitas y lo que podemos hacer.',startLink:'Empezar con mi negocio →',processEyebrow:'CÓMO TRABAJAMOS',processTitle:'De la primera pregunta a un plan concreto.',faqEyebrow:'ANTES DE HABLAR',faqTitle:'Lo que conviene tener claro.',privacyTitle:'Uso de tus datos en esta solicitud',privacyBody:'Giovanny Sales utilizará los datos que envíes para revisar tu solicitud, preparar una propuesta y contactarte. El envío se realiza a través de FormSubmit hacia publimaster7magana@gmail.com. Incluye tus respuestas y una orientación automática basada en ellas. No adjuntes bases de clientes, contraseñas ni información confidencial. Para consultar, corregir o solicitar la eliminación de tus datos, escribe a ese mismo correo. Enviar este formulario no te suscribe a campañas publicitarias.',continue:'Continuar',back:'Atrás',send:'Enviar solicitud',sending:'Enviando…',proposal:'Recibir una propuesta',choose:'Selecciona una opción',optional:'Opcional',required:'Obligatorio',resultTag:'ORIENTACIÓN INICIAL',firstSteps:'Por dónde empezaríamos',consider:'También conviene revisar',disclaimer:'Esta orientación se basa en tus respuestas. No sustituye una revisión de tus campañas ni garantiza resultados. Confirmaremos contigo el servicio y su alcance.',review:'Necesitamos conversar un poco más para recomendarte un servicio con fundamento.',fit:'La propuesta se ajustará a tu presupuesto y alcance. Publicidad, herramientas y viajes se cotizan por separado.',error:'No pudimos confirmar el envío. Conservamos tus respuestas: vuelve a intentarlo o contáctanos por WhatsApp.',phoneError:'Incluye un número válido con código de país, por ejemplo +52 33 1260 4405.',consent:'Acepto que Giovanny Sales use mis respuestas para revisar mi solicitud y contactarme.',privacyLink:'Ver uso de datos',step:'Paso',of:'de',fieldPlaceholder:'',busy:'Espera a que termine el envío.'},en:{skip:'Skip to the assessment',services:'Services',about:'About Giovanny',eyebrow:'STRATEGY · CONTENT · FOLLOW-UP',headline:'Your business has potential.<br><span>Let’s find your next step.</span>',intro:'Tell me what you want to improve. We’ll help identify a service that fits your business before preparing a proposal.',noSignup:'No account needed',privacyHint:'Your answers are only sent when you request it at the end.',successTitle:'Request sent',successText:'Your information has been sent for review. Giovanny will contact you to confirm the scope and arrange a meeting. Your requested time is not booked yet.',whatsapp:'Chat on WhatsApp',sideIntro:'For businesses that want a clearer direction for their marketing and better follow-up on sales opportunities.',experience:'Over 10 years in sales',personal:'Work directly with Giovanny',coverage:'Mexico and the United States',languages:'Service in English and Spanish',travel:'Production based in Guadalajara',travelNote:'Travel available with a separate quote',serviceEyebrow:'THE SERVICE FOLLOWS YOUR GOAL',serviceTitle:'Different needs. A plan for yours.',serviceIntro:'We can support your team, deliver a defined service or teach you to do it within your business.',aboutEyebrow:'MEET GIOVANNY',aboutTitle:'Sales experience. Personal attention.',aboutBody:'I’m Giovanny. I have more than ten years of experience in sales, and I want to understand your business before recommending a solution. I combine creativity, continuous learning and personal attention to turn your goals into practical actions.',aboutBody2:'I work directly with you: we define priorities, agree on deliverables and review progress. Every project starts with an honest conversation about what you need and what we can deliver.',startLink:'Start with my business →',processEyebrow:'HOW WE WORK',processTitle:'From your first answer to a practical plan.',faqEyebrow:'BEFORE WE TALK',faqTitle:'A few things to know.',privacyTitle:'How your request data is used',privacyBody:'Giovanny Sales will use the information you submit to review your request, prepare a proposal and contact you. FormSubmit sends your answers and a preliminary assessment based on them to publimaster7magana@gmail.com. Do not include customer databases, passwords or confidential information. To access, correct or request deletion of your data, contact that email address. Submitting this form does not subscribe you to advertising campaigns.',continue:'Continue',back:'Back',send:'Send request',sending:'Sending…',proposal:'Request a proposal',choose:'Select an option',optional:'Optional',required:'Required',resultTag:'PRELIMINARY ASSESSMENT',firstSteps:'Where we would start',consider:'Also worth reviewing',disclaimer:'This guidance is based on your answers. It does not replace a review of your campaigns or guarantee results. We will confirm the service and scope with you.',review:'We need a conversation to understand your situation before recommending a service.',fit:'Your proposal will reflect your budget and scope. Ad spend, software and travel are quoted separately.',error:'We could not confirm delivery. Your answers are still here: try again or contact us on WhatsApp.',phoneError:'Enter a valid phone number with country code, for example +1 305 555 0123.',consent:'I agree that Giovanny Sales may use my answers to review my request and contact me.',privacyLink:'See data use',step:'Step',of:'of',fieldPlaceholder:'',busy:'Please wait for the request to finish.'}};
+const COPY={
+  "es": {
+    "skip": "Ir al diagnóstico",
+    "services": "Servicios",
+    "about": "Sobre Giovanny",
+    "eyebrow": "MARKETING Y VENTAS PARA NEGOCIOS",
+    "headline": "Atrae prospectos.<br>Retoma conversaciones.<br><span>Genera oportunidades de venta.</span>",
+    "intro": "Te ayudo a conectar tu contenido, marketing y seguimiento comercial para que tus prospectos tengan un siguiente paso claro. Estrategia e inteligencia artificial aplicadas a lo que tu negocio necesita.",
+    "noSignup": "Sin crear una cuenta",
+    "privacyHint": "Tus respuestas se envían únicamente cuando tú lo solicitas al finalizar.",
+    "successTitle": "Solicitud enviada",
+    "successText": "Tu información se envió para revisión. Giovanny te contactará para confirmar el alcance y acordar la cita. El horario solicitado todavía no está reservado.",
+    "whatsapp": "Hablar por WhatsApp",
+    "sideIntro": "Para empresas que quieren dar dirección a su marketing y aprovechar mejor cada oportunidad comercial.",
+    "experience": "Estrategia aplicada a tu negocio",
+    "personal": "Atención directa con Giovanny",
+    "coverage": "México y Estados Unidos",
+    "languages": "Atención en español e inglés",
+    "travel": "Producción desde Guadalajara",
+    "travelNote": "Viajes disponibles con cotización previa",
+    "serviceEyebrow": "EL SERVICIO SIGUE AL OBJETIVO",
+    "serviceTitle": "¿Qué necesita avanzar en tu negocio?",
+    "serviceIntro": "Encuentra el apoyo que necesitas para atraer prospectos, mejorar tu seguimiento o trabajar con más claridad.",
+    "aboutEyebrow": "CONOCE A GIOVANNY",
+    "aboutTitle": "Una estrategia clara. Un trato directo. Un siguiente paso definido.",
+    "aboutBody": "Soy Giovanny, fundador de Giovanny Sales. Trabajo desde Guadalajara con dueños de negocio en México y Estados Unidos que quieren atraer mejores clientes, dar seguimiento y aprovechar las herramientas digitales.",
+    "aboutBody2": "He trabajado en contenido para restaurantes, campañas para negocios locales y sitios con sistemas de reservas. Mi enfoque es conectar lo que tu negocio comunica con lo que sucede cuando alguien pregunta, cotiza o quiere comprar.",
+    "startLink": "Platiquemos de tu negocio",
+    "processEyebrow": "CÓMO TRABAJAMOS",
+    "processTitle": "Primero entendemos el negocio. Después ponemos el plan en marcha.",
+    "faqEyebrow": "ANTES DE HABLAR",
+    "faqTitle": "Lo que conviene tener claro.",
+    "privacyTitle": "Uso de tus datos en esta solicitud",
+    "privacyBody": "Giovanny Sales utilizará los datos que envíes para revisar tu solicitud, preparar una propuesta y contactarte. El envío se realiza a través de FormSubmit hacia publimaster7magana@gmail.com. Incluye tus respuestas y una orientación automática basada en ellas. No adjuntes bases de clientes, contraseñas ni información confidencial. Para consultar, corregir o solicitar la eliminación de tus datos, escribe a ese mismo correo. Enviar este formulario no te suscribe a campañas publicitarias.",
+    "continue": "Continuar",
+    "back": "Atrás",
+    "send": "Enviar mi diagnóstico",
+    "sending": "Enviando…",
+    "restart": "Iniciar otro diagnóstico",
+    "proposal": "Recibir una propuesta",
+    "choose": "Selecciona una opción",
+    "optional": "Opcional",
+    "required": "Obligatorio",
+    "resultTag": "ORIENTACIÓN INICIAL",
+    "firstSteps": "Por dónde empezaríamos",
+    "consider": "También conviene revisar",
+    "disclaimer": "Esta orientación se basa en tus respuestas. No sustituye una revisión de tus campañas ni garantiza resultados. Confirmaremos contigo el servicio y su alcance.",
+    "review": "Necesitamos conversar un poco más para recomendarte un servicio con fundamento.",
+    "fit": "La propuesta se ajustará a tu presupuesto y alcance. Publicidad, herramientas y viajes se cotizan por separado.",
+    "error": "No pudimos confirmar el envío. Conservamos tus respuestas: vuelve a intentarlo o contáctanos por WhatsApp.",
+    "phoneError": "Incluye un número válido con código de país, por ejemplo +52 33 1260 4405.",
+    "consent": "Acepto que Giovanny Sales use mis respuestas para revisar mi solicitud y contactarme.",
+    "privacyLink": "Ver uso de datos",
+    "step": "Paso",
+    "of": "de",
+    "fieldPlaceholder": "",
+    "busy": "Espera a que termine el envío.",
+    "heroHelp": "Empieza con un diagnóstico o platiquemos directamente sobre lo que quieres mejorar.",
+    "diagnosisCTA": "Iniciar mi diagnóstico",
+    "callCTA": "Solicitar una llamada",
+    "aboutBody3": "Trabajas directamente conmigo. Primero reviso cómo llegan tus prospectos, cómo los atiendes y con qué recursos cuentas. Después te propongo qué atender primero, qué vamos a hacer y cómo revisaremos el avance.",
+    "aboutBody4": "Mi compromiso es que tengas claro para qué sirve cada acción y qué necesito de tu parte para llevarla a la práctica.",
+    "proofEyebrow": "PROYECTOS",
+    "proofTitle": "Conoce el trabajo detrás de Giovanny Sales",
+    "proofIntro": "Dos ejemplos de cómo llevo la estrategia a herramientas y contenido para negocios.",
+    "proofOne": "Desarrollo de un sitio con información de servicios, reservas y un panel para administrar citas. Un proyecto enfocado en facilitar la experiencia de las clientas y la organización del negocio.",
+    "proofTwo": "Creación de videos y contenido para presentar platillos, bebidas y promociones en redes sociales. Piezas pensadas para mostrar la experiencia del restaurante y comunicar su oferta con claridad.",
+    "proofOneType": "Belleza y cuidado personal",
+    "proofTwoType": "Restaurante",
+    "proofCTA": "Quiero revisar mis oportunidades de venta",
+    "callTitle": "¿Prefieres contarme directamente qué está pasando en tu negocio?",
+    "callBody": "Platiquemos sobre qué quieres mejorar, cómo lo estás resolviendo hoy y si puedo ayudarte.",
+    "callNote": "Hablarás directamente conmigo. Acordaremos el horario por WhatsApp.",
+    "scopeNote": "Las cantidades de piezas, contactos, sesiones, plataformas y herramientas se definen en tu propuesta.",
+    "sendNote": "Enviar el formulario no te compromete a contratar."
+  },
+  "en": {
+    "skip": "Skip to the assessment",
+    "services": "Services",
+    "about": "About Giovanny",
+    "eyebrow": "MARKETING AND SALES FOR BUSINESSES",
+    "headline": "Attract prospects.<br>Restart conversations.<br><span>Create sales opportunities.</span>",
+    "intro": "I help connect your content, marketing and sales follow-up so your prospects have a clear next step. Strategy and AI applied to what your business needs.",
+    "noSignup": "No account needed",
+    "privacyHint": "Your answers are only sent when you request it at the end.",
+    "successTitle": "Request sent",
+    "successText": "Your information has been sent for review. Giovanny will contact you to confirm the scope and arrange a meeting. Your requested time is not booked yet.",
+    "whatsapp": "Chat on WhatsApp",
+    "sideIntro": "For businesses that want a clearer direction for their marketing and better follow-up on sales opportunities.",
+    "experience": "Strategy applied to your business",
+    "personal": "Work directly with Giovanny",
+    "coverage": "Mexico and the United States",
+    "languages": "Service in English and Spanish",
+    "travel": "Production based in Guadalajara",
+    "travelNote": "Travel available with a separate quote",
+    "serviceEyebrow": "THE SERVICE FOLLOWS YOUR GOAL",
+    "serviceTitle": "What needs to move forward in your business?",
+    "serviceIntro": "Find the support you need to attract prospects, improve follow-up or work with more clarity.",
+    "aboutEyebrow": "MEET GIOVANNY",
+    "aboutTitle": "A clear strategy. Direct communication. A defined next step.",
+    "aboutBody": "I’m Giovanny, founder of Giovanny Sales. Based in Guadalajara, I work with business owners in Mexico and the United States who want to attract better-fit customers, follow up and make better use of digital tools.",
+    "aboutBody2": "My experience includes restaurant content, campaigns for local businesses and websites with booking systems. My focus is connecting what your business communicates with what happens when someone asks a question, requests a quote or wants to buy.",
+    "startLink": "Let’s talk about your business",
+    "processEyebrow": "HOW WE WORK",
+    "processTitle": "First, we understand the business. Then we put the plan to work.",
+    "faqEyebrow": "BEFORE WE TALK",
+    "faqTitle": "A few things to know.",
+    "privacyTitle": "How your request data is used",
+    "privacyBody": "Giovanny Sales will use the information you submit to review your request, prepare a proposal and contact you. FormSubmit sends your answers and a preliminary assessment based on them to publimaster7magana@gmail.com. Do not include customer databases, passwords or confidential information. To access, correct or request deletion of your data, contact that email address. Submitting this form does not subscribe you to advertising campaigns.",
+    "continue": "Continue",
+    "back": "Back",
+    "send": "Send my assessment",
+    "sending": "Sending…",
+    "restart": "Start another assessment",
+    "proposal": "Request a proposal",
+    "choose": "Select an option",
+    "optional": "Optional",
+    "required": "Required",
+    "resultTag": "PRELIMINARY ASSESSMENT",
+    "firstSteps": "Where we would start",
+    "consider": "Also worth reviewing",
+    "disclaimer": "This guidance is based on your answers. It does not replace a review of your campaigns or guarantee results. We will confirm the service and scope with you.",
+    "review": "We need a conversation to understand your situation before recommending a service.",
+    "fit": "Your proposal will reflect your budget and scope. Ad spend, software and travel are quoted separately.",
+    "error": "We could not confirm delivery. Your answers are still here: try again or contact us on WhatsApp.",
+    "phoneError": "Enter a valid phone number with country code, for example +1 305 555 0123.",
+    "consent": "I agree that Giovanny Sales may use my answers to review my request and contact me.",
+    "privacyLink": "See data use",
+    "step": "Step",
+    "of": "of",
+    "fieldPlaceholder": "",
+    "busy": "Please wait for the request to finish.",
+    "heroHelp": "Start with an assessment or talk to me directly about what you want to improve.",
+    "diagnosisCTA": "Start my assessment",
+    "callCTA": "Request a call",
+    "aboutBody3": "You work directly with me. First, I review how prospects find you, how you respond and what resources you have. Then I recommend a priority, define the work and explain how we will review progress.",
+    "aboutBody4": "My commitment is to make the purpose of each action clear, including what I need from you to put it into practice.",
+    "proofEyebrow": "PROJECTS",
+    "proofTitle": "See the work behind Giovanny Sales",
+    "proofIntro": "Two examples of turning strategy into tools and content for businesses.",
+    "proofOne": "Development of a website with service information, booking and an appointment management panel. A project focused on making the client experience and business organization easier.",
+    "proofTwo": "Creation of videos and content to present dishes, drinks and promotions on social media. Content designed to show the restaurant experience and explain its offer clearly.",
+    "proofOneType": "Beauty and personal care",
+    "proofTwoType": "Restaurant",
+    "proofCTA": "Review my sales opportunities",
+    "callTitle": "Would you rather tell me directly what’s happening in your business?",
+    "callBody": "Let’s talk about what you want to improve, how you handle it today and whether I can help.",
+    "callNote": "You will speak directly with me. We’ll arrange a time through WhatsApp.",
+    "scopeNote": "The number of pieces, contacts, sessions, platforms and tools is defined in your proposal.",
+    "sendNote": "Sending this form does not commit you to hiring a service."
+  }
+};
 const pair=(es,en)=>({es,en});
-const SERVICES={recovery:{title:pair('Recuperación de prospectos','Lead recovery & follow-up'),description:pair('Reactivación de oportunidades, organización comercial, CRM y automatizaciones con un alcance acordado.','Re-engage opportunities, organize sales follow-up and introduce CRM or automation within an agreed scope.'),steps:[pair('Revisar el recorrido de los prospectos y dónde se pierde el seguimiento.','Review the lead journey and where follow-up breaks down.'),pair('Definir una prueba de recuperación con contactos autorizados y mensajes relevantes.','Define a recovery pilot using authorized contacts and relevant messages.'),pair('Medir respuestas, citas y oportunidades antes de ampliar el proceso.','Measure replies, meetings and opportunities before expanding.')]},marketing:{title:pair('Marketing digital','Digital marketing'),description:pair('Estrategia, gestión de redes y campañas para una marca, con contenidos y objetivos definidos desde el inicio.','Strategy, social media management and campaigns for one brand, with defined content and objectives.'),steps:[pair('Revisar la oferta, el público y las campañas actuales.','Review your offer, audience and current campaigns.'),pair('Elegir canales y contenidos según el objetivo y el presupuesto.','Choose channels and content that fit your goal and budget.'),pair('Medir consultas calificadas, citas y ventas que puedan atribuirse.','Track qualified inquiries, meetings and attributable sales.')]},video:{title:pair('Video y marca personal','Video & personal branding'),description:pair('Ideas, guiones, grabación y edición de videos para presentar tu negocio, tu experiencia y tus servicios.','Ideas, scripts, filming and editing to present your business, expertise and services.'),steps:[pair('Definir a quién quieres hablarle y qué debe comunicar cada video.','Define your audience and the purpose of each video.'),pair('Preparar guiones y acordar locación, grabación y entregables.','Prepare scripts and agree on location, filming and deliverables.'),pair('Entregar versiones para los canales elegidos y revisar su desempeño.','Deliver versions for the chosen channels and review performance.')]},social:{title:pair('Aprende a manejar tus redes','Learn to manage your social media'),description:pair('Capacitación práctica para que tú o tu equipo planeen, creen y organicen el contenido de su negocio.','Practical training so you or your team can plan, create and organize business content.'),steps:[pair('Identificar el nivel del equipo y las redes que necesita manejar.','Identify your team’s current level and relevant platforms.'),pair('Trabajar con ejercicios aplicados a tu negocio y un calendario de contenido.','Use exercises based on your business and a content calendar.'),pair('Dejar una rutina de publicación y métricas para revisar avances.','Set a publishing routine and metrics to review progress.')]},ai:{title:pair('Inteligencia artificial para tu negocio','AI training for your business'),description:pair('Un curso práctico de IA para trabajar con ideas, contenido y tareas del negocio, con revisión humana.','Practical AI training for ideas, content and business tasks, with human review.'),steps:[pair('Elegir tareas concretas donde la IA pueda ayudar a tu equipo.','Choose specific tasks where AI may help your team.'),pair('Practicar con herramientas y ejemplos adecuados al nivel de los participantes.','Practice with tools and examples that fit participants’ experience.'),pair('Crear una guía de uso, revisión de respuestas y cuidado de datos.','Create a guide for use, reviewing outputs and handling data responsibly.')]},review:{title:pair('Revisión comercial inicial','Initial business review'),description:pair('Una conversación para ordenar tus prioridades y confirmar qué servicio puede ayudarte.','A conversation to clarify your priorities and determine which service may help.'),steps:[pair('Precisar el objetivo más importante para tu negocio.','Clarify your most important business goal.'),pair('Revisar los recursos, el equipo y los datos disponibles.','Review available resources, people and data.'),pair('Acordar el siguiente paso y un alcance realista.','Agree on a next step and a realistic scope.')]}};
+const SERVICES={
+  "recovery": {
+    "title": {
+      "es": "Recuperación de prospectos y seguimiento",
+      "en": "Lead recovery and follow-up"
+    },
+    "description": {
+      "es": "Retoma el contacto con personas que ya mostraron interés y organiza el seguimiento de cada oportunidad.",
+      "en": "Reconnect with people who have already shown interest and organize follow-up for each opportunity."
+    },
+    "steps": [
+      {
+        "es": "Revisar el recorrido de los prospectos y dónde se pierde el seguimiento.",
+        "en": "Review the lead journey and where follow-up breaks down."
+      },
+      {
+        "es": "Definir una prueba de recuperación con contactos autorizados y mensajes relevantes.",
+        "en": "Define a recovery pilot using authorized contacts and relevant messages."
+      },
+      {
+        "es": "Medir respuestas, citas y oportunidades antes de ampliar el proceso.",
+        "en": "Measure replies, meetings and opportunities before expanding."
+      }
+    ]
+  },
+  "marketing": {
+    "title": {
+      "es": "Marketing digital para delegar",
+      "en": "Digital marketing you can delegate"
+    },
+    "description": {
+      "es": "Dale continuidad a tu comunicación con contenido y campañas alineados con tu oferta y tu público.",
+      "en": "Maintain consistent communication with content and campaigns aligned with your offer and audience."
+    },
+    "steps": [
+      {
+        "es": "Revisar la oferta, el público y las campañas actuales.",
+        "en": "Review your offer, audience and current campaigns."
+      },
+      {
+        "es": "Elegir canales y contenidos según el objetivo y el presupuesto.",
+        "en": "Choose channels and content that fit your goal and budget."
+      },
+      {
+        "es": "Medir consultas calificadas, citas y ventas que puedan atribuirse.",
+        "en": "Track qualified inquiries, meetings and attributable sales."
+      }
+    ]
+  },
+  "video": {
+    "title": {
+      "es": "Video y marca personal",
+      "en": "Video and personal branding"
+    },
+    "description": {
+      "es": "Convierte tu experiencia en videos que responden dudas y ayudan a tus futuros clientes a entender lo que ofreces.",
+      "en": "Turn your expertise into videos that answer questions and help future customers understand your offer."
+    },
+    "steps": [
+      {
+        "es": "Definir a quién quieres hablarle y qué debe comunicar cada video.",
+        "en": "Define your audience and the purpose of each video."
+      },
+      {
+        "es": "Preparar guiones y acordar locación, grabación y entregables.",
+        "en": "Prepare scripts and agree on location, filming and deliverables."
+      },
+      {
+        "es": "Entregar versiones para los canales elegidos y revisar su desempeño.",
+        "en": "Deliver versions for the chosen channels and review performance."
+      }
+    ]
+  },
+  "social": {
+    "title": {
+      "es": "Aprender a manejar redes",
+      "en": "Learn to manage social media"
+    },
+    "description": {
+      "es": "Aprende a organizar tus redes y crear contenido con un método que puedas mantener en el día a día.",
+      "en": "Learn to organize your social media and create content with a method you can maintain day to day."
+    },
+    "steps": [
+      {
+        "es": "Identificar el nivel del equipo y las redes que necesita manejar.",
+        "en": "Identify your team’s current level and relevant platforms."
+      },
+      {
+        "es": "Trabajar con ejercicios aplicados a tu negocio y un calendario de contenido.",
+        "en": "Use exercises based on your business and a content calendar."
+      },
+      {
+        "es": "Dejar una rutina de publicación y métricas para revisar avances.",
+        "en": "Set a publishing routine and metrics to review progress."
+      }
+    ]
+  },
+  "ai": {
+    "title": {
+      "es": "Inteligencia artificial para tu negocio",
+      "en": "AI for your business"
+    },
+    "description": {
+      "es": "Identifica dónde puede ayudarte y aprende a utilizarla dentro de tu operación.",
+      "en": "Identify where it can help and learn to use it within your operation."
+    },
+    "steps": [
+      {
+        "es": "Revisar el proceso y elegir una tarea prioritaria.",
+        "en": "Review the process and choose one priority task."
+      },
+      {
+        "es": "Configurar un flujo de apoyo con prompts y plantillas adaptados al negocio.",
+        "en": "Set up a support workflow with prompts and templates tailored to the business."
+      },
+      {
+        "es": "Probar el flujo y capacitar al equipo para utilizarlo.",
+        "en": "Test the workflow and train the team to use it."
+      }
+    ]
+  },
+  "review": {
+    "title": {
+      "es": "Revisión comercial inicial",
+      "en": "Initial business review"
+    },
+    "description": {
+      "es": "Una conversación para ordenar tus prioridades y confirmar qué servicio puede ayudarte.",
+      "en": "A conversation to clarify your priorities and determine which service may help."
+    },
+    "steps": [
+      {
+        "es": "Precisar el objetivo más importante para tu negocio.",
+        "en": "Clarify your most important business goal."
+      },
+      {
+        "es": "Revisar los recursos, el equipo y los datos disponibles.",
+        "en": "Review available resources, people and data."
+      },
+      {
+        "es": "Acordar el siguiente paso y un alcance realista.",
+        "en": "Agree on a next step and a realistic scope."
+      }
+    ]
+  }
+};
+const SERVICE_DETAILS={
+  "recovery": {
+    "es": [
+      "Recuperación de prospectos y seguimiento",
+      "Dale un siguiente paso a las conversaciones pendientes.",
+      "Retoma el contacto con personas que ya mostraron interés y organiza el seguimiento de cada oportunidad.",
+      [
+        "Revisión y clasificación de contactos.",
+        "Mensajes según el interés y la etapa de compra.",
+        "Secuencia de contacto con próximos pasos definidos.",
+        "Registro de respuestas, citas y oportunidades.",
+        "Reporte de avances."
+      ],
+      "Negocios que reciben consultas por WhatsApp, redes o formularios y acumulan conversaciones sin atender.",
+      "Más conversaciones retomadas y claridad sobre a quién contactar, qué proponer y cuándo dar seguimiento.",
+      "Quiero recuperar oportunidades"
+    ],
+    "en": [
+      "Lead recovery and follow-up",
+      "Give pending conversations a next step.",
+      "Reconnect with people who have already shown interest and organize follow-up for each opportunity.",
+      [
+        "Review and classify contacts.",
+        "Messages based on interest and buying stage.",
+        "A contact sequence with defined next steps.",
+        "Track replies, appointments and opportunities.",
+        "Progress report."
+      ],
+      "Businesses receiving inquiries through WhatsApp, social media or forms with conversations left unanswered.",
+      "More restarted conversations and clarity about who to contact, what to propose and when to follow up.",
+      "Recover my opportunities"
+    ]
+  },
+  "marketing": {
+    "es": [
+      "Marketing digital para delegar",
+      "Tu marketing avanza mientras tú diriges el negocio.",
+      "Dale continuidad a tu comunicación con contenido y campañas alineados con tu oferta y tu público.",
+      [
+        "Revisión de tu oferta, público y canales.",
+        "Calendario mensual de contenido.",
+        "Redacción, diseño y programación de las piezas acordadas.",
+        "Configuración y seguimiento de campañas.",
+        "Reporte de consultas y desempeño."
+      ],
+      "Negocios con una oferta definida que necesitan mantener activo y organizado su marketing.",
+      "Una presencia constante, mensajes más claros y visibilidad sobre el desempeño de tus acciones.",
+      "Quiero delegar mi marketing"
+    ],
+    "en": [
+      "Digital marketing you can delegate",
+      "Keep marketing moving while you run your business.",
+      "Maintain consistent communication with content and campaigns aligned with your offer and audience.",
+      [
+        "Review your offer, audience and channels.",
+        "Monthly content calendar.",
+        "Copywriting, design and scheduling of agreed content.",
+        "Campaign setup and monitoring.",
+        "Inquiry and performance report."
+      ],
+      "Businesses with a defined offer that need consistent, organized marketing.",
+      "A consistent presence, clearer messages and visibility into performance.",
+      "Delegate my marketing"
+    ]
+  },
+  "video": {
+    "es": [
+      "Video y marca personal",
+      "Explica tu valor. Da razones para elegirte.",
+      "Convierte tu experiencia en videos que responden dudas y ayudan a tus futuros clientes a entender lo que ofreces.",
+      [
+        "Definición de temas y mensajes clave.",
+        "Guiones con apertura, desarrollo y llamado a la acción.",
+        "Guía para grabarte.",
+        "Edición de videos verticales con subtítulos.",
+        "Textos de acompañamiento y recomendaciones de publicación."
+      ],
+      "Consultores, especialistas y dueños que quieren ser la cara visible de su negocio.",
+      "Contenido que comunica tu experiencia con claridad y ayuda a las personas a dar el siguiente paso para contratarte.",
+      "Quiero impulsar mi marca personal"
+    ],
+    "en": [
+      "Video and personal branding",
+      "Explain your value. Give people reasons to choose you.",
+      "Turn your expertise into videos that answer questions and help future customers understand your offer.",
+      [
+        "Define topics and key messages.",
+        "Scripts with an opening, development and call to action.",
+        "Guidance for recording yourself.",
+        "Vertical video editing with subtitles.",
+        "Captions and publishing recommendations."
+      ],
+      "Consultants, specialists and owners who want to be the visible face of their business.",
+      "Content that clearly communicates your expertise and helps people take the next step toward hiring you.",
+      "Build my personal brand"
+    ]
+  },
+  "social": {
+    "es": [
+      "Aprender a manejar redes",
+      "Publica con un plan y entiende qué está funcionando.",
+      "Aprende a organizar tus redes y crear contenido con un método que puedas mantener en el día a día.",
+      [
+        "Revisión de tus perfiles.",
+        "Sesiones prácticas de contenido, publicación y atención de consultas.",
+        "Plantillas de calendario y guías de trabajo.",
+        "Ejercicios aplicados a tu negocio.",
+        "Revisión de tus piezas con retroalimentación.",
+        "Explicación de las métricas que conviene evaluar."
+      ],
+      "Dueños o colaboradores que quieren gestionar sus redes con más estructura.",
+      "Mayor autonomía para planear, publicar y evaluar tu contenido.",
+      "Quiero aprender a manejar mis redes"
+    ],
+    "en": [
+      "Learn to manage social media",
+      "Publish with a plan and understand what is working.",
+      "Learn to organize your social media and create content with a method you can maintain day to day.",
+      [
+        "Review your profiles.",
+        "Practical sessions on content, publishing and handling inquiries.",
+        "Calendar templates and working guides.",
+        "Exercises based on your business.",
+        "Content review and feedback.",
+        "Explanation of useful metrics."
+      ],
+      "Owners or team members who want a more structured approach to social media.",
+      "More independence in planning, publishing and evaluating your content.",
+      "Learn to manage my social media"
+    ]
+  },
+  "ai": {
+    "es": [
+      "Inteligencia artificial para tu negocio",
+      "Pon la IA a trabajar en una tarea concreta.",
+      "Identifica dónde puede ayudarte y aprende a utilizarla dentro de tu operación.",
+      [
+        "Revisión del proceso y las herramientas actuales.",
+        "Selección de una tarea prioritaria.",
+        "Configuración de un flujo de apoyo.",
+        "Prompts y plantillas adaptados a tu negocio.",
+        "Pruebas y capacitación."
+      ],
+      "Negocios con tareas repetitivas que quieren empezar a utilizar IA con un objetivo claro.",
+      "Menos tiempo dedicado a tareas repetitivas y una herramienta útil para el trabajo diario.",
+      "Quiero aplicar IA en mi negocio",
+      "Podemos trabajar en respuestas frecuentes, preparación de contenido, organización de información o apoyo al seguimiento comercial."
+    ],
+    "en": [
+      "AI for your business",
+      "Put AI to work on a specific task.",
+      "Identify where it can help and learn to use it within your operation.",
+      [
+        "Review your process and current tools.",
+        "Choose one priority task.",
+        "Set up a support workflow.",
+        "Prompts and templates tailored to your business.",
+        "Testing and training."
+      ],
+      "Businesses with repetitive tasks that want to start using AI with a clear objective.",
+      "Less time on repetitive tasks and a useful tool for everyday work.",
+      "Apply AI in my business",
+      "We can work on frequently asked questions, content preparation, organizing information or supporting sales follow-up."
+    ]
+  }
+};
 const opt=(value,es,en)=>({value,label:pair(es,en)});
 const FIELDS={
 goal:{label:pair('¿Qué quieres mejorar primero?','What do you want to improve first?'),type:'radio',required:true,options:[opt('recovery','Recuperar prospectos y dar seguimiento','Recover leads and improve follow-up'),opt('marketing','Delegar mi marketing digital','Delegate my digital marketing'),opt('video','Crear videos y fortalecer mi marca','Create videos and strengthen my brand'),opt('social','Aprender a manejar mis redes','Learn to manage my social media'),opt('ai','Aprender a usar IA en mi negocio','Learn to use AI in my business'),opt('unsure','Necesito ayuda para identificarlo','Help me identify what I need')]},
@@ -77,27 +545,49 @@ FIELDS.level={label:pair('Experiencia del equipo con el tema','Your team’s exp
 FIELDS.trainingNeed={label:pair('¿Qué tarea quieren aprender o mejorar?','What task do you want to learn or improve?'),type:'textarea',required:true,max:600};
 FIELDS.format={label:pair('Modalidad preferida','Preferred format'),type:'select',required:true,options:[opt('remote','En línea','Online'),opt('inperson','Presencial, con cotización de traslado','In person, with a separate travel quote'),opt('flexible','Quiero evaluar ambas','I would like to consider both')]};
 const STEPS=[{title:pair('¿Qué necesita hoy tu negocio?','What does your business need today?'),help:pair('Elige tu prioridad. Después afinamos la recomendación con tu situación actual.','Choose your priority. We’ll refine the recommendation based on your current situation.'),fields:['goal']},{title:pair('Primero, conozcamos tu negocio.','First, tell us about your business.'),help:pair('Esto nos ayuda a entender tu mercado y la forma en que operas.','This helps us understand your market and how you operate.'),fields:['business','sector','country','city','scale','website']},{title:pair('De la publicidad al seguimiento.','From advertising to follow-up.'),help:pair('No necesitas cifras exactas. Si no lo sabes, puedes indicarlo.','You do not need exact figures. If you are unsure, you can say so.'),fields:['ads','currency','adSpend','leads','follow','crm']},{title:pair('Un servicio que encaje contigo.','A service that fits the way you work.'),help:pair('Definamos el apoyo que necesitas y los recursos disponibles.','Let’s clarify the support you need and the resources available.'),fields:['delivery','content','team','serviceBudget','timeline','target']},{title:pair('Este puede ser tu siguiente paso.','This could be your next step.'),help:pair('Una orientación inicial para conversar con más claridad.','Preliminary guidance for a more useful conversation.'),fields:[]},{title:pair('Hablemos de tu proyecto.','Let’s talk about your project.'),help:pair('Envía tus respuestas para que Giovanny revise tu situación y prepare la conversación.','Send your answers so Giovanny can review your situation and prepare for the conversation.'),fields:['name','whatsapp','email','meeting','timezone','preferredLanguage']}];
-let language='es', step=0, submitting=false;
+let language='es', step=0, submitting=false, contactLanguageChosen=false;
 const answers={currency:'MXN',preferredLanguage:'es'};
 const form=document.getElementById('leadForm');
 const fieldArea=document.getElementById('stepContent');
 const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const tr=x=>typeof x==='object'?x[language]:x;
 function renderField(key){const f=FIELDS[key], id='field-'+key, val=answers[key]??'';const required=f.required?' required':'';const help=f.help?` aria-describedby="${id}-help"`:'';const label=escapeHTML(tr(f.label));if(f.type==='radio')return `<fieldset><legend class="visually-hidden">${label}</legend><div class="choices">${f.options.map(o=>`<label class="choice"><input type="radio" name="${key}" value="${o.value}"${val===o.value?' checked':''}${required}><span>${escapeHTML(tr(o.label))}</span></label>`).join('')}</div></fieldset>`;let control='';if(f.type==='select')control=`<select id="${id}" name="${key}"${required}${help}><option value="">${COPY[language].choose}</option>${f.options.map(o=>`<option value="${o.value}"${val===o.value?' selected':''}>${escapeHTML(tr(o.label))}</option>`).join('')}</select>`;else if(f.type==='textarea')control=`<textarea id="${id}" name="${key}" maxlength="${f.max}"${required}${help}>${escapeHTML(val)}</textarea>`;else control=`<input id="${id}" name="${key}" type="${f.type}" value="${escapeHTML(val)}"${required}${help}${f.autocomplete?` autocomplete="${f.autocomplete}"`:''}${f.type==='number'?` min="0" max="${f.max}" step="1"`:` maxlength="${f.max}"`}>`;return `<div class="field"><label for="${id}">${label}${f.required?' *':` <span style="font-weight:400;color:var(--muted)">(${COPY[language].optional})</span>`}</label>${control}${f.help?`<small id="${id}-help">${escapeHTML(tr(f.help))}</small>`:''}</div>`;}
+STEPS[5].title=pair('Listo. Revisemos por dónde conviene empezar.','Ready. Let’s review where to start.');
+STEPS[5].help=pair('Confirma tus datos antes de enviar. Revisaré tus respuestas y te contactaré para conversar sobre el siguiente paso. Enviar el formulario no te compromete a contratar.','Confirm your details before sending. I will review your answers and contact you to discuss the next step. Sending the form does not commit you to hiring a service.');
 function stepFields(){const training=['social','ai'].includes(answers.goal);if(step===2&&training)return ['team','level','trainingNeed'];if(step===3&&training)return ['format','currency','serviceBudget','timeline','target'];if(step===2&&answers.goal==='video')return ['content','delivery','team'];if(step===3&&answers.goal==='video')return ['currency','serviceBudget','timeline','target'];return STEPS[step].fields;}
 function save(){for(const key of stepFields()){const field=form.elements.namedItem(key);if(field){if(key==='goal'&&answers.goal&&answers.goal!==field.value){for(const stale of ['ads','adSpend','leads','follow','crm','delivery','content','team','level','trainingNeed','format'])delete answers[stale];}answers[key]=field.value;}}const consent=form.elements.namedItem('consent');if(consent)answers.consent=consent.checked;const hp=form.elements.namedItem('company_url_check');if(hp)answers.honeypot=hp.value;}
 function recommend(a){let primary=a.goal&&a.goal!=='unsure'?a.goal:'review';const reasons=[];let secondary=null;const leak=['lost','manual'].includes(a.follow)&&['some','many'].includes(a.leads);if(a.goal==='marketing'&&a.delivery==='train'){primary='social';reasons.push(pair('Quieres que tú o tu equipo aprendan a gestionar las redes.','You want to learn or train your team to manage social media.'));}else if((a.goal==='unsure'||a.goal==='marketing')&&leak){primary='recovery';if(a.goal==='marketing')secondary='marketing';reasons.push(pair('Indicas que ya recibes prospectos y el seguimiento es irregular. Conviene revisar esa oportunidad antes de ampliar la captación.','You already receive leads but follow-up is inconsistent. It is worth reviewing this before expanding acquisition.'));}else if(a.goal==='unsure'&&a.delivery==='train'){primary='social';reasons.push(pair('Prefieres capacitar a tu equipo; confirmaremos el temario antes de elegir un curso.','You prefer to train your team; we will confirm the topics before selecting a course.'));}else if(a.goal==='unsure'&&a.content==='record'&&a.delivery==='delegate'){primary='video';reasons.push(pair('Necesitas producción de contenido y prefieres delegarla.','You need content production and prefer to delegate it.'));}else if(a.goal==='unsure'&&a.ads!=='unknown'&&a.ads&&a.delivery==='delegate'){primary='marketing';reasons.push(pair('Buscas apoyo de ejecución para tu presencia y captación digital.','You want delivery support for your digital presence and acquisition.'));}if(!SERVICES[primary])primary='review';if(!reasons.length)reasons.push(primary==='review'?pair(COPY.es.review,COPY.en.review):pair('Esta ruta responde a la prioridad que elegiste. En la llamada validaremos qué entregables necesitas.','This route matches your selected priority. We will confirm the deliverables you need during the call.'));if(primary==='marketing'&&a.content==='record')secondary='video';if(primary==='video'&&leak)secondary='recovery';return{primary,secondary,reasons};}
 function resultHTML(){const r=recommend(answers),s=SERVICES[r.primary];return `<article><span class="result-tag">${COPY[language].resultTag}</span><div class="result-box"><h3>${escapeHTML(tr(s.title))}</h3><p>${escapeHTML(tr(s.description))}</p></div>${r.reasons.map(x=>`<p>${escapeHTML(tr(x))}</p>`).join('')}<h3 style="margin-top:24px">${COPY[language].firstSteps}</h3><ol class="result-steps">${s.steps.map(x=>`<li>${escapeHTML(tr(x))}</li>`).join('')}</ol>${r.secondary?`<p><strong>${COPY[language].consider}:</strong> ${escapeHTML(tr(SERVICES[r.secondary].title))}.</p>`:''}<p class="result-disclaimer">${COPY[language].disclaimer}</p><p class="support-note">${COPY[language].fit}</p></article>`;}
 function renderStep(focus=false){const c=COPY[language];const training=['social','ai'].includes(answers.goal);const titles=step===2&&training?pair('La capacitación comienza con tu equipo.','Training starts with your team.'):step===2&&answers.goal==='video'?pair('Demos forma a tus videos.','Let’s shape your videos.'):STEPS[step].title;const helps=step===2&&training?pair('Cuéntanos el nivel y las tareas que necesitan practicar.','Tell us about your experience and the tasks you need to practice.'):step===2&&answers.goal==='video'?pair('Aclaremos qué material tienes y qué producción necesitas.','Let’s clarify the footage you have and the production you need.'):STEPS[step].help;document.getElementById('stepCount').textContent=`${c.step} ${step+1} ${c.of} ${STEPS.length}`;document.getElementById('stepTitle').textContent=tr(titles);document.getElementById('stepHelp').textContent=tr(helps);document.getElementById('bar').style.width=((step+1)/STEPS.length*100)+'%';document.querySelector('[role=progressbar]').setAttribute('aria-valuenow',step+1);document.querySelector('[role=progressbar]').setAttribute('aria-label',language==='es'?'Progreso':'Progress');fieldArea.innerHTML=step===4?resultHTML():stepFields().map(renderField).join('');if(step===5)fieldArea.insertAdjacentHTML('beforeend',`<div class="hp" aria-hidden="true"><label for="company-url">Leave empty</label><input id="company-url" name="company_url_check" tabindex="-1" autocomplete="off"></div><label class="consent"><input type="checkbox" name="consent" required${answers.consent?' checked':''}><span>${c.consent} <a href="#privacidad">${c.privacyLink}</a></span></label>`);document.getElementById('back').hidden=step===0;document.getElementById('back').textContent=c.back;document.getElementById('next').textContent=step===5?c.send:step===4?c.proposal:c.continue;document.getElementById('formError').hidden=true;if(focus){document.getElementById('stepTitle').focus({preventScroll:true});document.getElementById('diagnostico').scrollIntoView({block:'start',behavior:'auto'});}}
-function renderPage(){const c=COPY[language];document.documentElement.lang=language;document.title=language==='es'?'Giovanny Sales | Encuentra el siguiente paso para tu negocio':'Giovanny Sales | Find your next business step';document.querySelector('meta[name=description]').content=language==='es'?'Recuperación de prospectos, marketing digital, video y capacitación en redes e IA. Encuentra el siguiente paso para tu negocio.':'Lead recovery, digital marketing, video and training in social media and AI. Find your next business step.';document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=c[el.dataset.i18n]);document.querySelectorAll('[data-i18n-html]').forEach(el=>el.innerHTML=c[el.dataset.i18nHtml]);document.getElementById('lang-es').setAttribute('aria-pressed',language==='es');document.getElementById('lang-en').setAttribute('aria-pressed',language==='en');document.querySelector('nav').setAttribute('aria-label',language==='es'?'Principal':'Main navigation');document.getElementById('diagnostico').setAttribute('aria-label',language==='es'?'Diagnóstico de negocio':'Business assessment');document.getElementById('serviceCards').innerHTML=Object.entries(SERVICES).filter(([key])=>key!=='review').map(([key,s],i)=>`<article class="service"><span class="number">0${i+1}</span><h3>${escapeHTML(tr(s.title))}</h3><p>${escapeHTML(tr(s.description))}</p><button type="button" data-service="${key}">${language==='es'?'Explorar este servicio →':'Explore this service →'}</button></article>`).join('');const methods=language==='es'?[['Entendemos','Nos cuentas dónde estás, qué has intentado y qué quieres mejorar.'],['Definimos','Acordamos servicio, entregables, inversión y responsabilidades.'],['Trabajamos y revisamos','Ejecutamos el alcance acordado y revisamos avances para decidir lo que sigue.']]:[['Understand','Tell us where you are, what you have tried and what you want to improve.'],['Define','Agree on the service, deliverables, investment and responsibilities.'],['Deliver and review','Deliver the agreed scope and review progress to decide what comes next.']];document.getElementById('method').innerHTML=methods.map(([title,body],i)=>`<article><span>0${i+1}</span><h3>${title}</h3><p>${body}</p></article>`).join('');const faqs=language==='es'?[['¿Los anuncios y herramientas están incluidos?','La propuesta separa los honorarios del servicio, la inversión en anuncios y las herramientas necesarias. Los entregables se acuerdan por escrito antes de comenzar.'],['¿Puedo contratar solo grabación o edición?','Sí. Podemos definir un proyecto de video por separado. Acordamos cantidad de piezas, duración, locación, formatos y rondas de ajustes.'],['¿Pueden trabajar fuera de Guadalajara?','Sí, la atención puede ser remota en México y Estados Unidos, en español o inglés. Las grabaciones presenciales y los viajes requieren acordar fechas, disponibilidad y una cotización específica.'],['¿Los cursos son para una persona o para equipos?','Podemos definir una capacitación individual o para un equipo. El temario, nivel, modalidad y número de participantes determinan la propuesta.'],['¿El diagnóstico confirma el servicio y la cita?','No. Es una orientación basada en tus respuestas. Giovanny revisará la solicitud contigo antes de confirmar el servicio, su alcance y el horario de la cita.'],['¿Pueden garantizarme ventas?','No prometemos una cifra de ventas. Los resultados dependen de factores como la oferta, el presupuesto, el mercado y el seguimiento comercial. Acordamos objetivos y qué indicadores revisaremos.']]:[['Are ad spend and software included?','The proposal separates service fees, ad spend and required software. Deliverables are agreed in writing before work begins.'],['Can I book filming or editing only?','Yes. We can define a separate video project, including the number of pieces, length, location, formats and revision rounds.'],['Can you work outside Guadalajara?','Yes. Remote services are available in Mexico and the United States, in English or Spanish. On-location filming and travel require agreed dates, availability and a separate quote.'],['Are courses for individuals or teams?','We can tailor training for an individual or a team. Topics, experience level, format and participant numbers determine the proposal.'],['Does the assessment confirm my service and appointment?','No. It provides guidance based on your answers. Giovanny will review your request with you before confirming the service, scope and meeting time.'],['Can you guarantee sales?','We do not promise a specific number of sales. Results depend on your offer, budget, market and sales follow-up. We agree on objectives and the metrics to review.']];document.getElementById('faqs').innerHTML=faqs.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('');renderStep();}
+const METHOD_COPY={"es":[["Revisamos tu punto de partida","Empieza con el diagnóstico o una llamada. Revisamos qué quieres mejorar, cómo llegan tus prospectos y qué sucede después del primer contacto."],["Definimos qué atender primero","Identificamos una prioridad según tu objetivo y los recursos disponibles. Así enfocamos el trabajo en una necesidad concreta."],["Acordamos el alcance y comenzamos","Dejamos claro qué incluye el servicio, qué voy a hacer y qué necesito de tu parte. Con ese alcance definido, ponemos el plan en marcha."],["Medimos los avances y ajustamos","Revisamos los indicadores que correspondan al servicio: respuestas, citas, oportunidades, desempeño del contenido o tiempo dedicado a tareas. Esa información nos ayuda a decidir el siguiente paso."]],"en":[["Review your starting point","Start with an assessment or a call. We review what you want to improve, how prospects find you and what happens after the first contact."],["Define the priority","We identify a priority based on your objective and available resources, focusing the work on a specific need."],["Agree on the scope and get started","We clarify what the service includes, what I will do and what I need from you. Then we put the plan into action."],["Measure progress and adjust","We review relevant indicators: replies, appointments, opportunities, content performance or time spent on tasks. That information helps us decide the next step."]]};
+function renderPage(){const c=COPY[language];document.querySelectorAll('[data-call]').forEach(a=>a.href='https://wa.me/523312604405?text='+encodeURIComponent(language==='es'?'Hola, Giovanny. Quiero solicitar una llamada para platicar sobre mi negocio. ¿Qué horarios tienes disponibles?':'Hi Giovanny. I would like to request a call about my business. What times are available?'));document.querySelector('[data-whatsapp]').href='https://wa.me/523312604405?text='+encodeURIComponent(language==='es'?'Hola, Giovanny. Quiero mejorar la captación y el seguimiento de clientes en mi negocio. ¿Podemos platicar?':'Hi Giovanny. I would like to improve lead generation and follow-up in my business. Can we talk?');document.documentElement.lang=language;document.title=language==='es'?'Giovanny Sales | Encuentra el siguiente paso para tu negocio':'Giovanny Sales | Find your next business step';document.querySelector('meta[name=description]').content=language==='es'?'Recuperación de prospectos, marketing digital, video y capacitación en redes e IA. Encuentra el siguiente paso para tu negocio.':'Lead recovery, digital marketing, video and training in social media and AI. Find your next business step.';document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=c[el.dataset.i18n]);document.querySelectorAll('[data-i18n-html]').forEach(el=>el.innerHTML=c[el.dataset.i18nHtml]);document.getElementById('lang-es').setAttribute('aria-pressed',language==='es');document.getElementById('lang-en').setAttribute('aria-pressed',language==='en');document.querySelector('nav').setAttribute('aria-label',language==='es'?'Principal':'Main navigation');document.getElementById('diagnostico').setAttribute('aria-label',language==='es'?'Diagnóstico de negocio':'Business assessment');document.getElementById('serviceCards').innerHTML=Object.entries(SERVICE_DETAILS).map(([key,item],i)=>{const d=item[language];return `<article class="service"><span class="number">0${i+1}</span><h3>${escapeHTML(d[0])}</h3><p class="service-promise">${escapeHTML(d[1])}</p><p>${escapeHTML(d[2])}</p><h4>${language==='es'?'Incluye':'Includes'}</h4><ul>${d[3].map(x=>'<li>'+escapeHTML(x)+'</li>').join('')}</ul>${d[7]?'<p>'+escapeHTML(d[7])+'</p>':''}<p><strong>${language==='es'?'Ideal para:':'Best for:'}</strong> ${escapeHTML(d[4])}</p><p><strong>${language==='es'?'Resultado esperado:':'Expected outcome:'}</strong> ${escapeHTML(d[5])}</p><button type="button" data-service="${key}">${escapeHTML(d[6])}</button></article>`;}).join('');const methods=METHOD_COPY[language];document.getElementById('method').innerHTML=methods.map(([title,body],i)=>`<article><span>0${i+1}</span><h3>${title}</h3><p>${body}</p></article>`).join('');const faqs=language==='es'?[['¿Los anuncios y herramientas están incluidos?','La propuesta separa los honorarios del servicio, la inversión en anuncios y las herramientas necesarias. Los entregables se acuerdan por escrito antes de comenzar.'],['¿Puedo contratar solo grabación o edición?','Sí. Podemos definir un proyecto de video por separado. Acordamos cantidad de piezas, duración, locación, formatos y rondas de ajustes.'],['¿Pueden trabajar fuera de Guadalajara?','Sí, la atención puede ser remota en México y Estados Unidos, en español o inglés. Las grabaciones presenciales y los viajes requieren acordar fechas, disponibilidad y una cotización específica.'],['¿Los cursos son para una persona o para equipos?','Podemos definir una capacitación individual o para un equipo. El temario, nivel, modalidad y número de participantes determinan la propuesta.'],['¿El diagnóstico confirma el servicio y la cita?','No. Es una orientación basada en tus respuestas. Giovanny revisará la solicitud contigo antes de confirmar el servicio, su alcance y el horario de la cita.'],['¿Pueden garantizarme ventas?','No prometemos una cifra de ventas. Los resultados dependen de factores como la oferta, el presupuesto, el mercado y el seguimiento comercial. Acordamos objetivos y qué indicadores revisaremos.']]:[['Are ad spend and software included?','The proposal separates service fees, ad spend and required software. Deliverables are agreed in writing before work begins.'],['Can I book filming or editing only?','Yes. We can define a separate video project, including the number of pieces, length, location, formats and revision rounds.'],['Can you work outside Guadalajara?','Yes. Remote services are available in Mexico and the United States, in English or Spanish. On-location filming and travel require agreed dates, availability and a separate quote.'],['Are courses for individuals or teams?','We can tailor training for an individual or a team. Topics, experience level, format and participant numbers determine the proposal.'],['Does the assessment confirm my service and appointment?','No. It provides guidance based on your answers. Giovanny will review your request with you before confirming the service, scope and meeting time.'],['Can you guarantee sales?','We do not promise a specific number of sales. Results depend on your offer, budget, market and sales follow-up. We agree on objectives and the metrics to review.']];document.getElementById('faqs').innerHTML=faqs.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('');renderStep();}
 function answerLabel(key,value,lang='es'){const f=FIELDS[key];return f?.options?.find(o=>o.value===value)?.label[lang]??(value===''||value==null?'No indicado':String(value));}
 function commercialReport(a){const r=recommend(a),s=SERVICES[r.primary];const discovery=['ai','social'].includes(r.primary)?'Confirmar tareas a practicar, nivel actual, número de participantes, modalidad, herramientas disponibles y cómo comprobarán lo aprendido.':r.primary==='video'?'Confirmar público, objetivo, cantidad y duración de piezas, material disponible, locación, viajes, permisos de grabación y rondas de ajustes.':'Confirmar prioridad, margen y ticket promedio; validar volumen/calidad de prospectos; quién decide y quién ejecuta; accesos y permisos; presupuesto separado de pauta.';return ['RESUMEN COMERCIAL AUTOMÁTICO — BASE PARA REVISIÓN HUMANA','Este documento usa reglas y respuestas declaradas. Es una orientación inicial para revisión; no verifica los datos ni sustituye un análisis de IA o una auditoría.','NEGOCIO: '+(a.business||'No indicado')+' | '+(a.sector||'No indicado'),'UBICACIÓN: '+(a.city||'No indicado')+', '+answerLabel('country',a.country),'PRIORIDAD DECLARADA: '+answerLabel('goal',a.goal),'OBJETIVO A 90 DÍAS: '+(a.target||'Por confirmar'),'SERVICIO SUGERIDO: '+s.title.es,...r.reasons.map(x=>'MOTIVO: '+x.es),r.secondary?'COMPLEMENTO A EVALUAR: '+SERVICES[r.secondary].title.es:'','PRESUPUESTOS: anuncios '+(a.adSpend||'No indicado')+' '+(a.currency||'')+' / servicio '+(a.serviceBudget||'No indicado')+' '+(a.currency||''),'PREGUNTAS PARA LA LLAMADA: '+discovery,'PRIMEROS 30 DÍAS PROPUESTOS (BORRADOR; FECHAS Y DISPONIBILIDAD POR CONFIRMAR):','Semana 1: '+s.steps[0].es,'Semana 2: '+s.steps[1].es,'Semanas 3–4: '+s.steps[2].es,'APERTURA SUGERIDA: “Vi que tu prioridad es '+answerLabel('goal',a.goal).toLowerCase()+'. Quiero entender qué han intentado y cómo mediríamos una mejora antes de proponerte el alcance.”','DATOS PENDIENTES: validar las respuestas, alcance, presupuesto, responsables y disponibilidad. Las cifras declaradas no han sido verificadas. No inferir rentabilidad ni prometer ventas.','OPERACIÓN: atención directa con Giovanny. Confirmar disponibilidad y cotizar viajes por separado. Si la solicitud está en USD, preparar cotización específica; no convertir automáticamente las referencias en MXN.','CITA SOLICITADA, NO CONFIRMADA: '+(a.meeting||'No indicado')+' / '+(a.timezone||'No indicado'),'IDIOMA DE CONTACTO: '+answerLabel('preferredLanguage',a.preferredLanguage)].filter(Boolean).join('\n\n');}
 function buildPayload(a,sourceUrl=''){const data=new FormData();data.set('_subject','Nuevo diagnóstico — Giovanny Sales');data.set('_template','table');if(sourceUrl)data.set('_url',sourceUrl);data.set('_captcha','false');data.set('_honey',a.honeypot||'');data.set('Origen','Sitio web Giovanny Sales');data.set('Versión del diagnóstico','Servicios y orientación ES/EN · 2026-09');const legacy={name:'Nombre',whatsapp:'WhatsApp',email:'Email',business:'Negocio',sector:'Qué vende',country:'País',city:'Ciudad',goal:'Servicio de interés',ads:'Publicidad',adSpend:'Inversión publicidad',currency:'Moneda',follow:'Seguimiento',crm:'CRM',target:'Meta 3 meses',serviceBudget:'Presupuesto crecimiento',meeting:'Horario preferido',timezone:'Zona horaria',preferredLanguage:'Idioma de contacto'};for(const [key,f]of Object.entries(FIELDS)){data.set(legacy[key]||f.label.es,answerLabel(key,a[key]));}data.set('Problema principal',answerLabel('goal',a.goal));data.set('Servicio recomendado',SERVICES[recommend(a).primary].title.es);data.set('Resumen comercial automático',commercialReport(a));data.set('Consentimiento','Aceptado para revisar solicitud y contactar; no suscripción publicitaria.');data.set('Fecha de envío',new Date().toISOString());if(a.email)data.set('_replyto',a.email);return data;}
 function validStep(){const phone=form.elements.namedItem('whatsapp');if(phone){phone.setCustomValidity('');const raw=phone.value.trim();const digits=raw.replace(/\D/g,'');if(!/^\+[\d\s().-]+$/.test(raw)||digits.length<8||digits.length>15)phone.setCustomValidity(COPY[language].phoneError);}for(const field of fieldArea.querySelectorAll('input,select,textarea')){if(['text','email','tel'].includes(field.type)||field.tagName==='TEXTAREA')field.value=field.value.trim();if(!field.checkValidity()){field.reportValidity();return false;}}return true;}
 document.getElementById('back').addEventListener('click',()=>{if(submitting)return;save();if(step>0){step--;renderStep(true);}});
-form.addEventListener('submit',async e=>{e.preventDefault();if(submitting)return;if(!validStep())return;save();if(step<5){step++;renderStep(true);return;}if(answers.honeypot)return;submitting=true;const btn=document.getElementById('next');btn.disabled=true;btn.textContent=COPY[language].sending;document.getElementById('back').disabled=true;document.querySelectorAll('.lang button,[data-service]').forEach(b=>b.disabled=true);document.getElementById('formError').hidden=true;const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),20000);try{const response=await fetch('https://formsubmit.co/ajax/publimaster7magana@gmail.com',{method:'POST',headers:{Accept:'application/json'},body:buildPayload(answers,location.origin+location.pathname),signal:controller.signal});if(!response.ok)throw new Error('FormSubmit HTTP '+response.status);const result=await response.json();if(result.success!==true&&result.success!=='true')throw new Error('FormSubmit: '+(result.message||'delivery not confirmed'));document.getElementById('wizard').hidden=true;document.getElementById('success').hidden=false;document.getElementById('success').scrollIntoView({block:'center'});for(const key of Object.keys(answers))delete answers[key];form.reset();fieldArea.innerHTML='';}catch(error){console.warn('Form delivery not confirmed:',error.message);const box=document.getElementById('formError');box.textContent=COPY[language].error;const fallback=document.createElement('a');fallback.href='https://wa.me/523312604405';fallback.className='btn secondary';fallback.style.marginTop='12px';fallback.textContent=COPY[language].whatsapp;box.append(document.createElement('br'),fallback);box.hidden=false;}finally{clearTimeout(timer);submitting=false;btn.disabled=false;btn.textContent=COPY[language].send;document.getElementById('back').disabled=false;document.querySelectorAll('.lang button,[data-service]').forEach(b=>b.disabled=false);}});
-for(const lang of ['es','en'])document.getElementById('lang-'+lang).addEventListener('click',()=>{if(submitting||language===lang)return;save();language=lang;answers.preferredLanguage=lang;renderPage();});
+form.addEventListener('submit',async e=>{e.preventDefault();if(submitting)return;if(!validStep())return;save();if(step<5){step++;renderStep(true);return;}if(answers.honeypot)return;submitting=true;const btn=document.getElementById('next');btn.disabled=true;btn.textContent=COPY[language].sending;document.getElementById('back').disabled=true;document.querySelectorAll('.lang button,[data-service]').forEach(b=>b.disabled=true);document.getElementById('formError').hidden=true;const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),20000);try{const response=await fetch('https://formsubmit.co/ajax/publimaster7magana@gmail.com',{method:'POST',headers:{Accept:'application/json'},body:buildPayload(answers,location.origin+location.pathname),signal:controller.signal});if(!response.ok)throw new Error('FormSubmit HTTP '+response.status);const result=await response.json();if(result.success!==true&&result.success!=='true')throw new Error('FormSubmit: '+(result.message||'delivery not confirmed'));document.getElementById('wizard').hidden=true;document.getElementById('success').hidden=false;document.getElementById('success').focus({preventScroll:true});document.getElementById('success').scrollIntoView({block:'center'});resetAnswers();form.reset();fieldArea.innerHTML='';}catch(error){console.warn('Form delivery not confirmed:',error.message);const box=document.getElementById('formError');box.textContent=COPY[language].error;const fallback=document.createElement('a');fallback.href='https://wa.me/523312604405';fallback.className='btn secondary';fallback.style.marginTop='12px';fallback.textContent=COPY[language].whatsapp;box.append(document.createElement('br'),fallback);box.hidden=false;}finally{clearTimeout(timer);submitting=false;btn.disabled=false;btn.textContent=COPY[language].send;document.getElementById('back').disabled=false;document.querySelectorAll('.lang button,[data-service]').forEach(b=>b.disabled=false);}});
+for(const lang of ['es','en'])document.getElementById('lang-'+lang).addEventListener('click',()=>{if(submitting||language===lang)return;save();language=lang;if(!contactLanguageChosen)answers.preferredLanguage=lang;renderPage();});
 document.getElementById('serviceCards').addEventListener('click',e=>{const btn=e.target.closest('[data-service]');if(!btn||submitting)return;save();if(answers.goal!==btn.dataset.service){for(const stale of ['ads','adSpend','leads','follow','crm','delivery','content','team','level','trainingNeed','format'])delete answers[stale];}answers.goal=btn.dataset.service;step=0;document.getElementById('wizard').hidden=false;document.getElementById('success').hidden=true;renderStep(true);});
+function resetAnswers(){
+  for(const key of Object.keys(answers))delete answers[key];
+  Object.assign(answers,{currency:'MXN',preferredLanguage:language});
+  contactLanguageChosen=false;
+}
+form.addEventListener('change',e=>{
+  if(e.target.name==='preferredLanguage')contactLanguageChosen=true;
+});
+document.getElementById('restart').addEventListener('click',()=>{
+  if(submitting)return;
+  resetAnswers();step=0;
+  document.getElementById('wizard').hidden=false;
+  document.getElementById('success').hidden=true;
+  renderStep(true);
+});
+document.querySelectorAll('a[href="#diagnostico"]').forEach(link=>link.addEventListener('click',()=>{
+  if(submitting)return;
+  if(document.getElementById('wizard').hidden)document.getElementById('restart').click();
+}));
 renderPage();
 </script>
 </body></html>
